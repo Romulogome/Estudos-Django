@@ -1,4 +1,5 @@
 from django.db import models
+import os
 
 def get_upload_path(instance, filename):
     #Obtém o nome do objeto
