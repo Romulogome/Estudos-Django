@@ -19,9 +19,9 @@ class Produto(models.Model):
     quantidade = models.IntegerField(default = 0)
     imagem = models.ImageField(upload_to = get_upload_path, blank = True, null = True)
 
-class Meta:
-    verbose_name = 'Produto'
-    verbose_name_plural = 'Produtos'
+    class Meta:
+        verbose_name = 'Produto'
+        verbose_name_plural = 'Produtos'
 
-def __str__(self) -> str:
-    return self.nome
+    def __str__(self) -> str:
+        return f"nome: {self.nome} preço: {self.preco}"
